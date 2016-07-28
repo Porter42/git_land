@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		body {
+	margin: 0;
+	background-image: url(photos/bkg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: arial;
+	-webkit-background-size:  cover;
+	-ms-background-size:  cover;
+	-moz-background-size:  cover;
+	-o-background-size:  cover;
+}
+
+.box {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.window-container {
+	width: 480px; height: 487px;
+	background-image: url(photos/window.png);
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 23%;
+	right: 8%;
+	color: #FFF;
+}
+
+.top-container {
+	width: 100%; height: 46%;
+    padding: 13% 8%;
+}
+
+.title {
+	width: 100%; height: 100%;
+	text-align: center;
+	padding-top: 6%;
+	font-size: 20px;
+}
+
+.bot-container {
+	width: 100%; height: 65%;
+	padding: 11% 9% 3% 9%;
+	text-align: center;
+}
+
+.question {
+	padding-top: 2%;
+	font-size: 20px;
+}
+
+.btns-container {
+	width: 100%; height: 33%;
+    padding: 3% 8% 5% 8%;
+}
+
+.btn-container {
+	width: 50%; height: 100%;
+	float: left;
+	padding: 0% 2%;
+}
+
+.btn {
+	width: 100%; height: 100%;
+	background-position: 0% 13%;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-position: 0% 57%;
+}
+
+.btn:active {
+	background-position: 0% 102%;
+}
+
+#yes_button {
+	background-image: url(photos/btn_yes.png);
+	background-size: 100%;
+}
+
+#no_button {
+	background-image: url(photos/btn_no.png);
+	background-size: 100%;
+}
+
+.step-block {
+	width: 100%; height: 50%;
+}
+
+#myProgress {
+	width: 90%; height: 38%;
+	margin: 0 auto;
+	margin-top: 4%;
+}
+
+#myBar {
+	width: 1%; height: 100%;
+	background-image: url(photos/load_bar.png);
+}
+
+.btn-cont-container {
+	width: 50%; height: 100%;
+	margin: 0 auto;
+}
+
+.btn-cont {
+	width: 100%; height: 100%;
+	background-image: url(photos/btn_cont.png);
+	background-size: 100%;
+	background-position: 0% 13%;
+	cursor: pointer;
+	margin-top: 5%;
+}
+
+.btn-cont:hover {
+	background-position: 0% 57%;
+}
+
+.btn-cont:active {
+	background-position: 0% 102%;
+}
+
+@media screen and (max-device-width: 1500px) and (orientation: landscape) {
+	.window-container {
+		bottom: 5%;
+	}
+}
+
+@media screen and (max-device-width: 1500px) and (orientation: portrait) {
+	.window-container {
+		position: static;
+		margin: 0 auto;
+		margin-top: 25%;
+	}
+}
+
+@media screen and (max-device-width: 950px) and (orientation: portrait) {
+	body {
+		background-image: url(photos/bkg_min.jpg);
+	}
+
+	.window-container {
+		position: static;
+		margin: 0 auto;
+		margin-top: 25%;
+	}
+}
+
+@media screen and (max-device-width: 750px) and (orientation: portrait) {
+	.window-container {
+		width: 70%; height: 41em;
+		margin-top: 5%;
+	}
+
+	.title {
+		font-size: 25px;
+	}
+
+	.top-container {
+		padding: 13% 10%;
+	}
+
+	.question {
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-device-width: 550px) and (orientation: portrait) {
+	.window-container {
+		width: 80%; height: 48em;
+	}
+
+	.question {
+		font-size: 27px;
+	}
+
+	.title {
+		font-size: 27px;
+	}
+}
+
+@media screen and (max-device-width: 395px) and (orientation: portrait) {
+	.window-container {
+		width: 90%; height: 60em;
+	}
+
+	.question {
+		font-size: 40px;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-device-width: 355px) and (orientation: portrait) {
+	.window-container {
+		width: 95%; height: 60em;
+	}
+
+	.question {
+		font-size: 40px;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-device-height: 620px) and (orientation: landscape) {
+		.window-container {
+			top: 0;
+			bottom: 2%;
+		}
+
+		body {
+			position: relative;
+		}
+}
+
+@media screen and (max-device-height: 492px) and (orientation: landscape) {
+		.title {
+			font-size: 1.13vw;
+		}
+
+		.question {
+			font-size: 1.3vw;
+		}
+
+		.window-container {
+			width: 25%;
+    		height: 90vh;
+		}
+}
+
+@-moz-document url-prefix() {
+	@media screen and (max-device-width: 700px) and (orientation: portrait) {
+		.window-container {
+			height: 29em;
+		}
+
+		.title {
+			font-size: 18px;
+		}
+
+		.question {
+			font-size: 17px;
+		}
+	}
+
+	@media screen and (max-device-width: 500px) and (orientation: portrait) {
+		.window-container {
+			height: 25em;
+		}
+
+		.title {
+			font-size: 14px;
+		}
+
+		.question {
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-device-width: 330px) and (orientation: portrait) {
+		.window-container {
+			height: 19em;
+		}
+
+		.title {
+			font-size: 11px;
+		}
+
+		.question {
+			font-size: 11px;
+		}
+	}
+}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="window-container">
+		<div class="top-container box">
+			<div class="title box" id="head_text">
+				Прежде чем вы войдете в Игру #1 с рейтингом 18+, мы должны задать вам несколько вопросов.
+			</div>
+		</div>
+		<div id="step_1" class="step-block">
+			<div class="bot-container box">
+				<div id="qsn" class="question box">
+					1. Вам уже исполнилось 18 лет?
+				</div>
+			</div>
+			<div class="btns-container box">
+				<div class="btn-container box">
+					<div id="yes_button" class="btn yes_button"></div>
+				</div>
+				<div class="btn-container box">
+					<div id="no_button" class="btn no_button"></div>
+				</div>
+			</div>
+		</div>
+		<div id="step_2" style="display: none;" class="step-block">
+			<div class="bot-container box">
+				<div class="question box">
+					2. В игре присутствуют персонажи с откровенными нарядами. Приемлемо ли это для вас?
+				</div>
+			</div>
+			<div class="btns-container box">
+				<div class="btn-container box">
+					<div id="yes_button" class="btn yes_button "></div>
+				</div>
+				<div class="btn-container box">
+					<div id="no_button" class="btn no_button"></div>
+				</div>
+			</div>
+		</div>
+		<div id="step_3" style="display: none;" class="step-block">
+			<div class="bot-container box">
+				<div id="myProgress">
+					<div id="myBar"></div>
+				</div>
+			</div>
+		</div>
+		<div id="step_4" style="display: none;" class="step-block">
+			<div class="bot-container box">
+				<div class="question box">
+					Вы можете немедленно приступить к игре. Удачи!
+				</div>
+			</div>
+			<div class="btns-container box">
+				<div id="nb" class="btn-cont-container">
+					<a id="outlink" href="landing.php%3Fid=931.html#"><div class="btn-cont"></div></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	document.getElementById('outlink').setAttribute('href', 'http://onedrive.su/code/l_click.php?id=931&url=');
+
+		function fadeIn( elem, ms )
+		{
+		  if( ! elem )
+		    return;
+
+		  elem.style.opacity = 0;
+		  elem.style.filter = "alpha(opacity=0)";
+		  elem.style.display = "block";
+		  elem.style.visibility = "visible";
+
+		  if( ms )
+		  {
+		    var opacity = 0;
+		    var timer = setInterval( function() {
+		      opacity += 50 / ms;
+		      if( opacity >= 1 )
+		      {
+		        clearInterval(timer);
+		        opacity = 1;
+		      }
+		      elem.style.opacity = opacity;
+		      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+		    }, 50 );
+		  }
+		  else
+		  {
+		    elem.style.opacity = 1;
+		    elem.style.filter = "alpha(opacity=1)";
+		  }
+		}
+
+		function fadeOut( elem, ms )
+		{
+		  if( ! elem )
+		    return;
+
+		  if( ms )
+		  {
+		    var opacity = 1;
+		    var timer = setInterval( function() {
+		      opacity -= 50 / ms;
+		      if( opacity <= 0 )
+		      {
+		        clearInterval(timer);
+		        opacity = 0;
+		        elem.style.display = "none";
+		        elem.style.visibility = "hidden";
+		      }
+		      elem.style.opacity = opacity;
+		      elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+		    }, 50 );
+		  }
+		  else
+		  {
+		    elem.style.opacity = 0;
+		    elem.style.filter = "alpha(opacity=0)";
+		    elem.style.display = "none";
+		    elem.style.visibility = "hidden";
+		  }
+		}
+
+		var el = document.getElementById('qsn');
+		var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+		var fontSize = parseFloat(style); 
+		var text_size = (fontSize + 4) + 'px';
+
+		var y_b = document.getElementsByClassName("yes_button");
+		var n_b = document.getElementsByClassName("no_button");
+
+		function step_1(evt) {
+
+			fadeOut( document.getElementById('step_1'), 300 );
+			setTimeout(function(){fadeIn( document.getElementById('step_2'), 300 )}, 300);
+		}
+
+		function step_2(evt) {
+
+			fadeOut( document.getElementById('step_2'), 300 );
+			setTimeout(function(){fadeIn( document.getElementById('step_3'), 300 ); document.getElementById("head_text").innerHTML = ""; }, 300);
+
+			function move() {
+			    var elem = document.getElementById("myBar");
+			    var width = 1;
+			    var id = setInterval(frame, 30);
+
+			    function frame() {
+			        if (width >= 100) {
+			            clearInterval(id);
+
+			            fadeOut( document.getElementById('step_3'), 300 );
+						setTimeout(function(){fadeIn( document.getElementById('step_4'), 300 ); document.getElementById("head_text").innerHTML = "<p style='font-size: 1.5em;'>Поздравляем!</p>"; }, 300);
+						document.getElementById('step_2').style.marginTop="-" + text_size;
+						document.getElementById('nb').style.marginTop="-15px";
+
+			        } else {
+			            width++; 
+			            elem.style.width = width + '%'; 
+			        }
+			    }
+			}
+			setTimeout(function(){move()}, 500);
+		}
+	
+		y_b[0].addEventListener("click", step_1, false);
+		n_b[0].addEventListener("click", step_1, false);
+
+		y_b[1].addEventListener("click", step_2, false);
+		n_b[1].addEventListener("click", step_2, false);
+</script>
+</body>
+</html>
